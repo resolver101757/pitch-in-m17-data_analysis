@@ -59,6 +59,7 @@ ax.set_ylabel('PSD (dB)')
 ##Another example 
 
 #Generating the fourier transform of the two data series
+from scipy.fft import rfft
 
 pressure_inlet_ultra_filtration_30days_fft = rfft(pressure_inlet_ultra_filtration_30days["Pressure_bar"].values)
 
