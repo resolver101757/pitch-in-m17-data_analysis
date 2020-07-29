@@ -67,7 +67,7 @@ pressure_inlet_ultra_filtration_30days_fft = rfft(pressure_inlet_ultra_filtratio
 pressure_inlet_ultra_filtration_30days_fft = (1/((len(pressure_inlet_ultra_filtration_30days_fft) - 1) * 2)) * np.abs(pressure_inlet_ultra_filtration_30days_fft)
 
 #Creating Frequency Values in Hz
-pressure_inlet_ultra_filtration_30days_frenquency = 1 / ((1 / ((np.arange(0, len(pressure_inlet_ultra_filtration_30days_fft))) * 100)) * 60 * 60 * 24)     #Period X Axis
+pressure_inlet_ultra_filtration_30days_frenquency = rfftfreq(len(clockingfftOriginal),1)    #Period X Axis
 
 
 #draw the chart 
